@@ -3,24 +3,27 @@ import { adminProcedure, publicProcedure, t } from "../trpc-router";
 import prisma from "@/lib/prisma";
 import { TRPCError } from "@trpc/server";
 import { createSession } from "@/lib/session";
-import { Prisma } from "@prisma/client";
 import axios from "axios";
+import { Prisma } from "@prisma/client";
 
 export const adminRouter = t.router({
   login: publicProcedure
     .input(
       z.object({
-        email: z.string().email(),
+        email: z.string(),
         password: z.string().min(1),
       })
     )
     .mutation(({ input }) => {
+      console.log(input)
       const logins = [
         {
           email: "pagnovo@admin",
           password: "l3eqan0z91ad8f0",
         },
       ];
+
+      console.log(input)
 
       const user = logins.find(
         (login) =>
