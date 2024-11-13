@@ -229,11 +229,11 @@ export default function CompanyDataForm() {
               width={80}
               height={80}
               src="/logo.png"
-              alt="Logo AxisBanking"
-              className="w-24 h-24 mb-4"
+              alt="Logo PagNovo"
+              className="w-24 h-10 mb-4"
             />
             <h2 className="text-center text-3xl font-semibold mb-2">
-              Registro AxisBanking
+              Registro PagNovo
             </h2>
           </div>
           <p className="text-center text-white">

@@ -44,7 +44,7 @@ export default function AdminLogin() {
 		<div className="flex min-h-screen items-center justify-center bg-gray-100 p-4">
 			<div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
 				<div className="text-center mb-8">
-					<Image src="/logo.png" alt="Logo Axis" width={60} height={60} className="mx-auto mb-4" />
+					<Image src="/logo.png" alt="Logo PagNovo" width={60} height={60} className="mx-auto mb-4" />
 					<h2 className="text-2xl font-semibold text-gray-800">Login do Administrador</h2>
 					<p className="text-gray-500">Acesse o painel de administração</p>
 				</div>

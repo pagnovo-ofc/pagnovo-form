@@ -16,13 +16,13 @@ export default async function SuccessMessage({ params }: { params: Promise<{ id:
 		<div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
 			<div className="max-w-md w-full p-10 bg-white text-center text-gray-800 rounded-xl shadow-md">
 				<div className="flex flex-col items-center mb-6">
-					<Image src="/logo.png" width={70} height={70} alt="Logo AxisBanking" className="mb-6" />
+					<Image src="/logo.png" width={70} height={70} alt="Logo PagNovo" className="mb-6" />
 					<FaCheckCircle className="text-green-500 w-16 h-16 mb-6" />
 					<h2 className="text-2xl font-semibold text-gray-900">Enviado com Sucesso!</h2>
 				</div>
 				<p className="text-gray-500 mb-6">
 					Em breve, você receberá um e-mail com o status de criação da sua conta. Obrigado por se registrar na
-					<strong className="text-gray-900"> AxisBanking</strong>.
+					<strong className="text-gray-900"> PagNovo</strong>.
 				</p>
 
 				<div

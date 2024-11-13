@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "AxisBanking - Formulário de Cadastro",
-	description: "Formulário de cadastro para o processo seletivo do AxisBanking",
+	title: "PagNovo - Formulário de Cadastro",
+	description: "Formulário de cadastro para o processo seletivo do PagNovo",
 };
 
 export default function RootLayout({
