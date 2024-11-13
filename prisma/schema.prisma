@@ -1,0 +1,84 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TICKET_STATUS {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model ticket {
+  id         String   @id @default(uuid())
+  custom_id  String   @unique @default(dbgenerated("gen_random_uuid()"))
+  created_at DateTime @default(now())
+
+  external_user_id String? @unique
+
+  status TICKET_STATUS @default(PENDING)
+
+  // Personal Data
+  full_name String
+  email     String
+
+  // Company Data
+  website            String
+  trade_name         String
+  legal_name         String
+  tax_id             String
+  monthly_revenue    String
+  incorporation_date DateTime
+  phone              String
+  company_email      String
+  tax_id_age         Int
+  partners_count     Int
+
+  // Address Data
+  postal_code     String
+  street_address  String
+  address_number  String
+  district        String
+  address_type    String
+  country         String
+  state           String
+  city            String
+  area_code       String
+  additional_info String?
+  reference_point String?
+
+  // Terms and Conditions
+  terms_accepted Boolean
+
+  // Partner Data (Fields for each partner can be added similarly if needed, or stored as JSON if there are multiple partners)
+  partner_social_id        String
+  partner_full_name        String
+  partner_email            String
+  partner_phone            String
+  partner_birth_date       DateTime
+  partner_mother_name      String
+  partner_father_name      String
+  partner_gender           String
+  partner_nationality      String
+  partner_document_rg      String   @default("")
+  partner_address_street   String   @default("")
+  partner_address_number   String   @default("")
+  partner_address_district String   @default("")
+  partner_address_zipcode  String   @default("")
+  partner_address_city     String   @default("")
+  partner_address_state    String   @default("")
+
+  // Relations to File table for uploaded files
+  contract_file_url            String
+  balance_file_url             String
+  address_proof_file_url       String
+  selfie_file_url              String
+  identity_file_url            String
+  commercial_contract_file_url String @default("")
+}
