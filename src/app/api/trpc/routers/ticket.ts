@@ -91,6 +91,7 @@ export const ticketRouter = t.router({
           email: input.email,
           name: input.legal_name,
           phone: input.phone,
+          status: "ANALYSING"
         },
         {
           headers: {
